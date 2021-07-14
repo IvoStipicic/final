@@ -27,13 +27,13 @@ export default {
   },
   methods: {
     actualizar(e) {
-      let ing = e.target.value;
-      this.input = ing;
-      this.first = ing;
-      this.second = ing;
-      this.third = ing;
-      this.four = ing;
-      this.five = ing;
+      let ingresando = e.target.value;
+      this.input = ingresando;
+      this.first = ingresando;
+      this.second = ingresando;
+      this.third = ingresando;
+      this.four = ingresando;
+      this.five = ingresando;
     },
   },
   computed: {},
