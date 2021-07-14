@@ -38,29 +38,6 @@ export default {
   },
   computed: {},
   filters: {
-    codificar: function(value) {
-      let palabraAModificar = "";
-      let palabralowercase = value.toLowerCase();
-      for (let i = 0; i < String(value).length; i++) {
-        let letra = palabralowercase[i];
-        switch (letra) {
-          case "a":
-            letra = "u";
-            break;
-          case "e":
-            letra = "o";
-            break;
-          case "o":
-            letra = "e";
-            break;
-          case "u":
-            letra = "a";
-            break;
-        }
-        palabraAModificar += letra;
-      }
-      return palabraAModificar;
-    },
     uppercase: function(value) {
       if (!value) return "";
       value = value.toString();
@@ -94,6 +71,29 @@ export default {
         }
       }
       return flip;
+    },
+    codificar: function(value) {
+      let palabraAModificar = "";
+      let palabralowercase = value.toLowerCase();
+      for (let i = 0; i < String(value).length; i++) {
+        let letra = palabralowercase[i];
+        switch (letra) {
+          case "a":
+            letra = "u";
+            break;
+          case "e":
+            letra = "o";
+            break;
+          case "o":
+            letra = "e";
+            break;
+          case "u":
+            letra = "a";
+            break;
+        }
+        palabraAModificar += letra;
+      }
+      return palabraAModificar;
     },
   },
 };
